@@ -11,6 +11,10 @@ module.exports = {
           from:{transform:"translateX(0)"},
           to:{transform:"translateX(-100%)"}
         }
+      },
+      backgroundImage: {
+        'hero-pattern': "url('linkedinprofile1.jpg')",
+        'footer-texture': "url('linkedinprofile1.jpg')",
       }
     },
   },
