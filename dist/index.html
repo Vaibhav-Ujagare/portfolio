@@ -6,58 +6,52 @@
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
-  <body class="bg-black h-full w-full overflow-x-hidden text-black">
+  <body class="bg-gray-700 h-full w-full overflow-x-hidden text-black">
     <!-- Navbar starts here  -->
 
     <div class="p-2">
       <nav
-        class="w-full h-15 flex text-white justify-between p-2 items-center "
+        class="w-full h-15 flex text-white justify-center md:justify-start p-2 items-center gap-5"
       >
-        <div class="flex gap-5 font-bold text-xl  p-1">
-          <img
-            src="../img/bajajindeflogo.jpeg"
-            class="h-10 w-15 rounded-full"
-            alt="logo"
-            srcset=""
-          />
-        </div>
-        <div class=" p-2">
-          <ul class="gap-5 font-bold text-xl md:flex hidden" id="list">
-            <!-- <li class="cursor-pointer ">Home</li> -->
-            <a class="cursor-pointer " href="#About">About</a>
-            <a class="cursor-pointer " href="#Experience">Experience</a>
-            <a class="cursor-pointer " href="#Skills">Skills</a>
-            <a class="cursor-pointer " href="#Education">Education</a>
-            <a class="cursor-pointer " href="#Project">Projects</a>
-          </ul>
-        </div>
-        <div class="md:hidden">
-          <a class="text-4xl" href="list">&#8801;</a>
+        <div class="p-2">
+          <div class="space-x-5 md:space-x-10 font-bold text-xl" id="list">
+            <a class="cursor-pointer hover:underline" href="#About">About</a>
+            <a class="cursor-pointer hover:underline" href="#Experience"
+              >Experience</a
+            >
+            <a class="cursor-pointer hover:underline" href="#Skills">Skills</a>
+            <a class="cursor-pointer hover:underline" href="#Education"
+              >Education</a
+            >
+            <a class="cursor-pointer hover:underline" href="#Project"
+              >Projects</a
+            >
+          </div>
         </div>
       </nav>
     </div>
+
     <!-- Navbar ends here -->
-    <!-- <hr> -->
+    <hr />
 
     <!-- About section Starts here -->
 
-    <div class="p-2  mt-2 mb-4">
+    <div class="p-2 mb-4 mt-10">
       <div
         id="About"
-        class="md:grid md:grid-cols-2 place-content-between h-auto md:mt-2 text-white flex-col-reverse flex p-2  gap-2"
+        class="lg:grid lg:grid-cols-2 place-content-between h-auto lg:mt-2 text-white flex-col-reverse flex p-2 gap-2"
       >
-        <div class="md:ml-10  p-2">
-          <p class="text-2xl  p-2">Hi, I am</p>
-          <p class="text-6xl mt-5  p-2 font-semibold">
-            Vaibhav Ujagare
-          </p>
-          <p class="text-white mt-5  p-2">
+        <div class="lg:ml-10 p-2 mt-14 lg:mt-5">
+          <p class="text-2xl p-2">Hi, I am</p>
+          <p class="text-6xl mt-5 p-2 font-semibold">Vaibhav Ujagare</p>
+          <p class="text-white mt-5 p-2">
             I am a Data Analyst & Python Developer having relevant experience
             1.7 years and currently working in the manufacturing industry. I am
             looking for new opportunities in data engineering.
           </p>
-          <div class="flex p-2 mt-5 ">
+          <div class="flex p-2 mt-5">
             <a
+              id="downloadresumebtn"
               class="text-center p-2 text-white text-base rounded hover:text-black transition ease-in-out delay-150 bg-cyan-400 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
               href="VAIBHAV-BHARAT-UJAGARE.pdf"
               download=""
@@ -65,7 +59,7 @@
             >
           </div>
         </div>
-        <div class="flex items-center place-content-center ">
+        <div class="flex items-center place-content-center">
           <img
             class="h-full w-80 rounded-full"
             src="/linkedinprofile1.jpg"
@@ -76,217 +70,220 @@
     </div>
 
     <!-- About section end here -->
-<!-- <hr> -->
+    <hr />
     <!-- Experience section starts here -->
 
-    <div class="p-2 mb-5" id="Experience">
+    <div class="mt-10" id="Experience">
       <div class="text-white mt-5 items-center flex flex-col p-2">
-        <div class="text-4xl font-bold text-indigo-500  p-2">
-          Experience
-        </div>
-        <div class="">
-          <div class="mt-10 p-4 rounded-xl shadow-2xl space-x-4 border-2">
-            <div class="p-3 max-w-md gap-4 flex">
-              <div>
-                <img
-                  class="h-20 w-20"
-                  src="../img/bajajindeflogo.jpeg"
-                  alt=""
-                />
-              </div>
-              <div>
-                <div>
-                  <p class="text-white text-3xl mb-2">Junior Data Analyst</p>
-                  <p>Bajaj Indef * Jan 2023 - July 2024</p>
-                </div>
-              </div>
-            </div>
-            <div class="p-3">
-              Bajaj Indef is a manufacturing company it provides material
-              handling solutions since 1962.
+        <div class="text-4xl font-bold text-indigo-500 p-2">Experience</div>
+        <!-- <div class="w-48 h-1 rounded-xl bg-indigo-300"></div> -->
+        <section class="py-10 px-6">
+          <div class="mx-auto">
+            <div class="">
+              <div class="grid gap-8 grid-cols-1">
+                <!-- Team Member 1 -->
+                <div class="border-2 rounded-lg">
+                  <div>
+                    <li class="flex gap-4 items-start p-2">
+                      <div class="flex-none w-24 h-24">
+                        <img
+                          src="img/bajajindeflogo.jpeg"
+                          class="w-full h-full"
+                          alt="Martiana Dialan"
+                        />
+                      </div>
+                      <div class="h-24">
+                        <h4 class="text-white font-semibold text-3xl">
+                          Junior Data Analyst
+                        </h4>
+                        <p class="text-indigo-400 mt-2 text-xl">
+                          Bajaj Indef * Jan 2023 - July 2024
+                        </p>
+                      </div>
+                    </li>
+                  </div>
+                  <div class="p-3 text-xl">
+                    Bajaj Indef is a manufacturing company it provides material
+                    handling solutions since 1962.
 
-              <li>
-                As data analyst I got opportunity to Manage the CRM (Customer
-                Relationship Management) Portal.
-              </li>
-              <li>
-                Perform ETL using Python from the CRM data to provide meaningful
-                insights which will play a key role in making business
-                decisions.
-              </li>
-              <li>
-                Created PowerBI Dashboards for internal use by using the
-                exported data from the CRM portal.
-              </li>
-              <li>
-                Developed a PowerApps-based application to streamline the
-                company's order processing workflow, from new order entry to
-                dispatch. This implementation resulted in a significant
-                reduction of approximately 30% in manual workload and eliminated
-                the need for lengthy email communications.
-              </li>
-              <li>
-                Created and circulated performance dashboard of APBs (Associated
-                Business Partners) and RSMs (Regional Sales Managers) every
-                week.
-              </li>
+                    <li>
+                      As data analyst I got opportunity to Manage the CRM
+                      (Customer Relationship Management) Portal.
+                    </li>
+                    <li>
+                      Perform ETL using Python from the CRM data to provide
+                      meaningful insights which will play a key role in making
+                      business decisions.
+                    </li>
+                    <li>
+                      Created PowerBI Dashboards for internal use by using the
+                      exported data from the CRM portal.
+                    </li>
+                    <li>
+                      Developed a PowerApps-based application to streamline the
+                      company's order processing workflow, from new order entry
+                      to dispatch. This implementation resulted in a significant
+                      reduction of approximately 30% in manual workload and
+                      eliminated the need for lengthy email communications.
+                    </li>
+                    <li>
+                      Created and circulated performance dashboard of APBs
+                      (Associated Business Partners) and RSMs (Regional Sales
+                      Managers) every week.
+                    </li>
+                  </div>
+                </div>
+
+                <!-- Repeat the above structure for each team member -->
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
 
     <!-- Experience section end here -->
-<!-- <hr> -->
+    <hr />
     <!-- Skills Section start here -->
 
-    <div class="p-2  mt-2" id="Skills">
-      <div class="text-white mt-5 items-center flex flex-col  p-2">
-        <div class="text-4xl font-bold text-indigo-500  mt-2 p-2">
-          Skills
-        </div>
-        <div class="flex flex-wrap  p-2 mt-5 w-full gap-2">
+    <div class="mt-10" id="Skills">
+      <div class="text-white mt-5 items-center flex flex-col">
+        <div class="text-4xl font-bold text-indigo-500 mt-2 p-2">Skills</div>
+        <!-- <div class="w-24 h-1 rounded-xl bg-yellow-400"></div> -->
+        <div
+          class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-8 justify-items-center mt-10 w-full"
+        >
           <div
-            class="max-w-[14rem] w-full border-2 shadow-md rounded-lg overflow-hidden flex items-center"
+            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
           >
-            <img
-              src="../img/SVG/css.svg"
-              alt="Programming Language"
-              class="w-24 h-24 p-2"
-            />
-            <div class="p-2">
-              <h2 class="text-2xl font-semibold text-white">CSS</h2>
+            <div class="">
+              <img class="h-32 w-32 rounded-lg" src="img/SVG/css.svg" alt="" />
             </div>
+            <h1 class="text-center text-2xl font-semibold mt-2">CSS</h1>
           </div>
 
           <div
-            class="max-w-[14rem] w-full border-2 shadow-md rounded-lg overflow-hidden flex items-center"
+            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
           >
-            <img
-              src="../img/SVG/django.svg"
-              alt="Programming Language"
-              class="w-24 h-24 p-2"
-            />
-            <div class="p-2">
-              <h2 class="text-2xl font-semibold text-white">Django</h2>
+            <div class="">
+              <img
+                class="h-32 w-32 rounded-lg"
+                src="img/SVG/django.svg"
+                alt=""
+              />
             </div>
+            <h1 class="text-center text-2xl font-semibold mt-2">Django</h1>
           </div>
 
           <div
-            class="max-w-[14rem] w-full border-2 shadow-md rounded-lg overflow-hidden flex items-center"
+            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
           >
-            <img
-              src="../img/SVG/git.svg"
-              alt="Programming Language"
-              class="w-24 h-24 p-2"
-            />
-            <div class="p-2">
-              <h2 class="text-2xl font-semibold text-white">GIT</h2>
+            <div class="">
+              <img class="h-32 w-32 rounded-lg" src="img/SVG/git.svg" alt="" />
             </div>
+            <h1 class="text-center text-2xl font-semibold mt-2">GIT</h1>
           </div>
 
           <div
-            class="max-w-[14rem] w-full border-2 shadow-md rounded-lg overflow-hidden flex items-center"
+            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
           >
-            <img
-              src="../img/SVG/html.svg"
-              alt="Programming Language"
-              class="w-24 h-24 p-2"
-            />
-            <div class="p-2">
-              <h2 class="text-2xl font-semibold text-white">HTML</h2>
+            <div class="">
+              <img class="h-32 w-32 rounded-lg" src="img/SVG/html.svg" alt="" />
             </div>
+            <h1 class="text-center text-2xl font-semibold mt-2">HTML</h1>
           </div>
 
           <div
-            class="max-w-[14rem] w-full border-2 shadow-md rounded-lg overflow-hidden flex items-center"
+            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
           >
-            <img
-              src="../img/SVG/javascript.svg"
-              alt="Programming Language"
-              class="w-24 h-24 p-2"
-            />
-            <div class="p-2">
-              <h2 class="text-2xl font-semibold text-white">JavaScript</h2>
+            <div class="">
+              <img
+                class="h-32 w-32 rounded-lg"
+                src="img/SVG/javascript.svg"
+                alt=""
+              />
             </div>
+            <h1 class="text-center text-2xl font-semibold mt-2">JavaScript</h1>
           </div>
 
           <div
-            class="max-w-[14rem] w-full border-2 shadow-md rounded-lg overflow-hidden flex items-center"
+            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
           >
-            <img
-              src="../img/SVG/mysql.svg"
-              alt="Programming Language"
-              class="w-24 h-24 p-2"
-            />
-            <div class="p-2">
-              <h2 class="text-2xl font-semibold text-white">MySQL</h2>
+            <div class="">
+              <img
+                class="h-32 w-32 rounded-lg"
+                src="img/SVG/mysql.svg"
+                alt=""
+              />
             </div>
+            <h1 class="text-center text-2xl font-semibold mt-2">MySQL</h1>
           </div>
 
           <div
-            class="max-w-[14rem] w-full border-2 shadow-md rounded-lg overflow-hidden flex items-center"
+            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
           >
-            <img
-              src="../img/SVG/numpy.svg"
-              alt="Programming Language"
-              class="w-24 h-24 p-2"
-            />
-            <div class="p-2">
-              <h2 class="text-2xl font-semibold text-white">Numpy</h2>
+            <div class="">
+              <img
+                class="h-32 w-32 rounded-lg"
+                src="img/SVG/numpy.svg"
+                alt=""
+              />
             </div>
+            <h1 class="text-center text-2xl font-semibold mt-2">Numpy</h1>
           </div>
 
           <div
-            class="max-w-[14rem] w-full border-2 shadow-md rounded-lg overflow-hidden flex items-center"
+            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
           >
-            <img
-              src="../img/SVG/postgresql.svg"
-              alt="Programming Language"
-              class="w-24 h-24 p-2"
-            />
-            <div class="p-2">
-              <h2 class="text-2xl font-semibold text-white">Postgresql</h2>
+            <div class="">
+              <img
+                class="h-32 w-32 rounded-lg"
+                src="img/SVG/postgresql.svg"
+                alt=""
+              />
             </div>
+            <h1 class="text-center text-2xl font-semibold mt-2">Postgresql</h1>
           </div>
 
           <div
-            class="max-w-[14rem] w-full border-2 shadow-md rounded-lg overflow-hidden flex items-center"
+            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
           >
-            <img
-              src="../img/SVG/python.svg"
-              alt="Programming Language"
-              class="w-24 h-24 p-2"
-            />
-            <div class="p-2">
-              <h2 class="text-2xl font-semibold text-white">Python</h2>
+            <div class="">
+              <img
+                class="h-32 w-32 rounded-lg"
+                src="img/SVG/python.svg"
+                alt=""
+              />
             </div>
+            <h1 class="text-center text-2xl font-semibold mt-2">Python</h1>
           </div>
 
           <div
-            class="max-w-[14rem] w-full border-2 shadow-md rounded-lg overflow-hidden flex items-center"
+            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
           >
-            <img
-              src=" ../img/SVG/react.svg"
-              alt="Programming Language"
-              class="w-24 h-24 p-2"
-            />
-            <div class="p-2">
-              <h2 class="text-2xl font-semibold text-white">React</h2>
+            <div class="">
+              <img
+                class="h-32 w-32 rounded-lg"
+                src="img/SVG/react.svg"
+                alt=""
+              />
             </div>
+            <h1 class="text-center text-2xl font-semibold mt-2">React</h1>
           </div>
 
           <div
-            class="max-w-[14rem] w-full border-2 shadow-md rounded-lg overflow-hidden flex items-center"
+            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
           >
-            <img
-              src=" ../img/SVG/tailwind.svg"
-              alt="Programming Language"
-              class="w-24 h-24 p-2"
-            />
-            <div class="p-2">
-              <h2 class="text-2xl font-semibold text-white">Tailwind CSS</h2>
+            <div class="">
+              <img
+                class="h-32 w-32 rounded-lg"
+                src="img/SVG/tailwind.svg"
+                alt=""
+              />
             </div>
+            <h1 class="text-center text-2xl font-semibold mt-2">
+              Tailwind CSS
+            </h1>
           </div>
         </div>
       </div>
@@ -298,57 +295,52 @@
 
     <div class="p-4" id="Education">
       <div class="text-white mt-5 items-center flex flex-col">
-        <div class="text-4xl font-bold text-indigo-500">Education</div>
-        <div class="flex gap-5 flex-col md:grid md:grid-cols-2">
-          <div class="mt-10 p-4 rounded-xl shadow-2xl space-x-4 border-2">
-            <div class="p-3 gap-4 flex">
-              <div>
-                <img class="h-30 w-40" src="../img/iiitb-logo.png" alt="" />
-              </div>
-              <div>
-                <div>
-                  <p class="text-white text-3xl mb-2">
-                    International Institute of Information Technology, Bangalore
-                  </p>
-                  <p>
-                    Executive Post Graducation Programming in Data Science *
-                    July 2021 - Aug 2022
-                  </p>
+        <div class="text-4xl font-bold text-indigo-500 mb-2">Education</div>
+        <!-- <div class="w-44 h-1 rounded-xl bg-yellow-400"></div> -->
+        <div class="py-10 mb-6 w-full px-6">
+          <div class="">
+            <div class="grid gap-5 md:grid-cols-1 lg:grid-cols-2">
+              <!-- Team Member 1 -->
+
+              
+
+             <div class="flex gap-4 items-start border-2 p-2">
+                  <div class="flex-none w-36 h-36">
+                    <img
+                      src="img/scct.jpeg"
+                      class="w-full h-full"
+                      alt="Martiana Dialan"
+                    />
+                  </div>
+                  <div class="">
+                    <h4 class="text-white font-semibold text-2xl">
+                      Bachlor of Science in Computer Science
+                    </h4>
+                    <p class="text-gray-400 mt-3">
+                      Bachelor of Science in Computer Science * July 2017 - Nov
+                      2020
+                    </p>
+                    
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="mt-10 p-4 rounded-xl shadow-2xl space-x-4 border-2">
-            <div class="p-3 gap-4 flex">
-              <div>
-                <img class="h-30 w-40" src="../img/scct.jpeg" alt="" />
-              </div>
-              <div>
-                <div>
-                  <p class="text-white text-3xl mb-2">
-                    Bachlor of Science in Computer Science
-                  </p>
-                  <p>
-                    Bachelor of Science in Computer Science * July 2017 - Nov
-                    2020
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mt-10 p-4 rounded-xl shadow-2xl space-x-4 border-2">
-            <div class="p-3 gap-4 flex">
-              <div>
-                <img class="h-30 w-40" src="../img/AFAC_logo.png" alt="" />
-              </div>
-              <div>
-                <div>
-                  <p class="text-white text-3xl mb-2">
-                    Acadamy of Fine Arts & Craft
-                  </p>
-                  <p>Higher Secondary Education * June 2015 - Nov 2017</p>
-                </div>
-              </div>
+
+                <!--  <div class="flex gap-4 items-start border-2 p-2">
+                  <div class="flex-none w-36 h-36 bg-white">
+                    <img
+                      src="img/AFAC_logo.png"
+                      class="w-full h-full"
+                      alt="Martiana Dialan"
+                    />
+                  </div>
+                  <div class="">
+                    <h4 class="text-white font-semibold sm:text-lg lg:text-2xl">
+                      Acadamy of Fine Arts & Craft
+                    </h4>
+                    <p class="text-gray-400 mt-3">
+                      Higher Secondary Education * June 2015 - Nov 2017
+                    </p>
+                  </div>
+                </div> -->
             </div>
           </div>
         </div>
@@ -360,66 +352,138 @@
     <!-- Project section start here -->
     <div class="p-4" id="Project">
       <div class="text-white mt-5 items-center flex flex-col">
-        <div class="text-4xl font-bold text-indigo-500">Projects</div>
-        <div class="flex flex-col gap-5 items-center md:grid md:grid-cols-2">
-          <div class="h-50 border-2 mt-10 rounded-xl shadow-2xl">
-            <div class="p-2">
-              <img
-                class="h-60 w-full rounded-md"
-                src="../img/ATS-Project-SS.png"
-                alt=""
-              />
+        <div class="text-4xl font-bold text-indigo-500 mb-2">Projects</div>
+        <!-- <div class="w-36 h-1 rounded-xl bg-yellow-400"></div> -->
+        <div class="w-full mb-6">
+          <div
+            class="mt-5 grid gap-4 sm:grid-cols-1 lg:grid-cols-2 md:grid-cols-1"
+          >
+            <!-- Blog Post 1 -->
+            <div
+              class="sm:max-w-lg md:max-w-3xl mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm"
+            >
+              <a href="javascript:void(0)">
+                <img
+                  src="img/ATS-Project-SS.png"
+                  loading="lazy"
+                  alt="Application Tracking System"
+                  class="w-full h-60 rounded-t-md"
+                />
+                <hr />
+                <div class="flex items-center pt-3 ml-4 mr-2">
+                  <div class="">
+                    <span class="block text-white text-2xl"
+                      >Application Tracking System</span
+                    >
+                    <!-- <span class="block text-gray-400 text-sm">Jan 4 2022</span> -->
+                  </div>
+                </div>
+                <div class="pt-3 ml-4 mr-2 mb-3">
+                  <div class="flex gap-3 items-center mb-2">
+                    <h1
+                      class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-1"
+                    >
+                      Python
+                    </h1>
+                    <h1
+                      class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-1"
+                    >
+                      API(Google Generative AI)
+                    </h1>
+                  </div>
+                  <p class="text-gray-400 text-sm mt-1">
+                    Developed an Application Tracking System designed to
+                    calculate the percentage of job descriptions that align with
+                    the skills listed in your resume. The system also suggests
+                    keywords to include in your resume to improve the match
+                    rate.
+                  </p>
+                </div>
+              </a>
             </div>
-            <div class="p-3 text-2xl">
-              <h1 class="text-3xl font-bold">Application Tracking System</h1>
-              <div class="flex gap-3 items-center mt-2">
-                <h1
-                  class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-1"
-                >
-                  Python
-                </h1>
-                <h1
-                  class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-1"
-                >
-                  API(Google Generative AI)
-                </h1>
-              </div>
-              <p class="mt-3 text-xl text-gray-300">
-                Developed an Application Tracking System designed to calculate
-                the percentage of job descriptions that align with the skills
-                listed in your resume. The system also suggests keywords to
-                include in your resume to improve the match rate.
-              </p>
+            <div
+              class="sm:max-w-lg md:max-w-3xl mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm"
+            >
+              <a href="javascript:void(0)">
+                <img
+                  src="img/ATS-Project-SS.png"
+                  loading="lazy"
+                  alt="Application Tracking System"
+                  class="w-full h-60 rounded-t-md"
+                />
+                <hr />
+                <div class="flex items-center pt-3 ml-4 mr-2">
+                  <div class="">
+                    <span class="block text-white text-2xl"
+                      >Application Tracking System</span
+                    >
+                    <!-- <span class="block text-gray-400 text-sm">Jan 4 2022</span> -->
+                  </div>
+                </div>
+                <div class="pt-3 ml-4 mr-2 mb-3">
+                  <div class="flex gap-3 items-center mb-2">
+                    <h1
+                      class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-1"
+                    >
+                      Python
+                    </h1>
+                    <h1
+                      class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-1"
+                    >
+                      API(Google Generative AI)
+                    </h1>
+                  </div>
+                  <p class="text-gray-400 text-sm mt-1">
+                    Developed an Application Tracking System designed to
+                    calculate the percentage of job descriptions that align with
+                    the skills listed in your resume. The system also suggests
+                    keywords to include in your resume to improve the match
+                    rate.
+                  </p>
+                </div>
+              </a>
             </div>
-          </div>
-          <div class="h-50 border-2 mt-10 rounded-xl shadow-2xl">
-            <div class="p-2">
-              <img
-                class="h-60 w-full rounded-md"
-                src="../img/ATS-Project-SS.png"
-                alt=""
-              />
-            </div>
-            <div class="p-3 text-2xl">
-              <h1 class="text-3xl font-bold">Application Tracking System</h1>
-              <div class="flex gap-3 items-center mt-2">
-                <h1
-                  class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-1"
-                >
-                  Python
-                </h1>
-                <h1
-                  class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-1"
-                >
-                  API(Google Generative AI)
-                </h1>
-              </div>
-              <p class="mt-3 text-xl text-gray-300">
-                Developed an Application Tracking System designed to calculate
-                the percentage of job descriptions that align with the skills
-                listed in your resume. The system also suggests keywords to
-                include in your resume to improve the match rate.
-              </p>
+            <div
+              class="sm:max-w-lg md:max-w-3xl mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm"
+            >
+              <a href="javascript:void(0)">
+                <img
+                  src="img/ATS-Project-SS.png"
+                  loading="lazy"
+                  alt="Application Tracking System"
+                  class="w-full h-60 rounded-t-md"
+                />
+                <hr />
+                <div class="flex items-center pt-3 ml-4 mr-2">
+                  <div class="">
+                    <span class="block text-white text-2xl"
+                      >Application Tracking System</span
+                    >
+                    <!-- <span class="block text-gray-400 text-sm">Jan 4 2022</span> -->
+                  </div>
+                </div>
+                <div class="pt-3 ml-4 mr-2 mb-3">
+                  <div class="flex gap-3 items-center mb-2">
+                    <h1
+                      class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-1"
+                    >
+                      Python
+                    </h1>
+                    <h1
+                      class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-1"
+                    >
+                      API(Google Generative AI)
+                    </h1>
+                  </div>
+                  <p class="text-gray-400 text-sm mt-1">
+                    Developed an Application Tracking System designed to
+                    calculate the percentage of job descriptions that align with
+                    the skills listed in your resume. The system also suggests
+                    keywords to include in your resume to improve the match
+                    rate.
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -429,13 +493,27 @@
     <!-- Project section end here -->
 
     <!-- Footer section starts here -->
-    <footer class="bg-slate-800 p-4 text-center text-white mt-10">
+    <footer class="bg-slate-800 p-4 text-center text-white mt-10" id="footer">
       <p>&copy; 2024 Vaibhav Ujagare. All rights reserved.</p>
       <div class="flex justify-center gap-4 mt-4">
-        <a href="https://www.linkedin.com/in/vaibhav-ujagare/" class="hover:text-gray-400">LinkedIn</a>
-        <a href="https://github.com/Vaibhav-Ujagare" class="hover:text-gray-400">GitHub</a>
-        <a href="https://leetcode.com/u/vaibhavujagare77/" class="hover:text-gray-400">Leetcode</a>
-        <a href="https://www.hackerrank.com/profile/vaibhavujagare77" class="hover:text-gray-400">HackerRank</a>
+        <a
+          href="https://www.linkedin.com/in/vaibhav-ujagare/"
+          class="hover:text-gray-400"
+          >LinkedIn</a
+        >
+        <a href="https://github.com/Vaibhav-Ujagare" class="hover:text-gray-400"
+          >GitHub</a
+        >
+        <a
+          href="https://leetcode.com/u/vaibhavujagare77/"
+          class="hover:text-gray-400"
+          >Leetcode</a
+        >
+        <a
+          href="https://www.hackerrank.com/profile/vaibhavujagare77"
+          class="hover:text-gray-400"
+          >HackerRank</a
+        >
       </div>
     </footer>
     <!-- Footer section ends here -->
@@ -443,7 +521,9 @@
 
   <script>
     let showresume = document
-      .getElementById("showresume")
-      .addEventListener("click", function () {});
+      .getElementById("downloadresumebtn")
+      .addEventListener("click", function () {
+        alert("Footer clicked");
+      });
   </script>
 </html>
