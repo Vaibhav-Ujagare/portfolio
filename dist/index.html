@@ -11,10 +11,10 @@
 
     <div class="p-2">
       <nav
-        class="w-full h-15 flex text-white justify-center md:justify-start p-2 items-center gap-5"
+        class="w-full h-15 flex text-white justify-between p-2 items-center gap-5"
       >
         <div class="p-2">
-          <div class="space-x-5 md:space-x-10 font-bold text-xl" id="list">
+          <div class="hidden sm:block space-x-5 font-bold text-xl" id="list">
             <a class="cursor-pointer hover:underline" href="#About">About</a>
             <a class="cursor-pointer hover:underline" href="#Experience"
               >Experience</a
@@ -28,11 +28,20 @@
             >
           </div>
         </div>
+        <div class="xsm::block sm:hidden">
+          <div
+            class="hamburger inline-block items-end justify-end place-content-end p-4"
+          >
+            <div class="line h-0.5 w-6 bg-white my-1"></div>
+            <div class="line h-0.5 w-6 bg-white my-1"></div>
+            <div class="line h-0.5 w-6 bg-white my-1"></div>
+          </div>
+        </div>
       </nav>
     </div>
 
     <!-- Navbar ends here -->
-    <hr />
+    <!-- <hr /> -->
 
     <!-- About section Starts here -->
 
@@ -79,13 +88,15 @@
         <!-- <div class="w-48 h-1 rounded-xl bg-indigo-300"></div> -->
         <section class="py-10 px-6">
           <div class="mx-auto">
-            <div class="">
+            <div class="mb-5">
               <div class="grid gap-8 grid-cols-1">
                 <!-- Team Member 1 -->
                 <div class="border-2 rounded-lg">
                   <div>
-                    <li class="flex gap-4 items-start p-2">
-                      <div class="flex-none w-24 h-24">
+                    <li
+                      class="flex flex-col sm:flex-row gap-4 items-center sm:items-start p-2"
+                    >
+                      <div class="flex-none w-56 h-48 sm:w-24 sm:h-24">
                         <img
                           src="img/bajajindeflogo.jpeg"
                           class="w-full h-full"
@@ -102,7 +113,7 @@
                       </div>
                     </li>
                   </div>
-                  <div class="p-3 text-xl">
+                  <div class="p-3 text-lg sm:text-xl">
                     Bajaj Indef is a manufacturing company it provides material
                     handling solutions since 1962.
 
@@ -151,7 +162,7 @@
         <div class="text-4xl font-bold text-indigo-500 mt-2 p-2">Skills</div>
         <!-- <div class="w-24 h-1 rounded-xl bg-yellow-400"></div> -->
         <div
-          class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-8 justify-items-center mt-10 w-full"
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 justify-items-center mt-10 w-full"
         >
           <div
             class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
@@ -299,29 +310,37 @@
         <!-- <div class="w-44 h-1 rounded-xl bg-yellow-400"></div> -->
         <div class="py-10 mb-6 w-full px-6">
           <div
-            class="mt-5 grid gap-4 sm:grid-cols-1 lg:grid-cols-2 md:grid-cols-1"
+            class="mt-5 grid gap-4 xsm:grid-cols-1 lg:grid-cols-2 md:grid-cols-1"
           >
             <!-- Blog Post 1 -->
             <div
-              class="sm:max-w-lg md:max-w-3xl mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm"
+              class="xsm:max-w-lg sm:max-w-3xl mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm"
             >
               <div class="p-2">
-                <div class="gap-4 flex">
-                  <div>
-                    <img class="h-40 w-48 bg-white" src="img/iiitb-logo.png" alt="" />
+                <div
+                  class="gap-4 flex flex-col items-center sm:items-start sm:flex-row"
+                >
+                  <div class="flex-none">
+                    <img
+                      class="h-60 w-72 bg-white sm:h-32 sm:w-36"
+                      src="img/iiitb-logo.png"
+                      alt=""
+                    />
                   </div>
                   <div>
-                    <p class="text-white text-3xl mb-2">
+                    <p
+                      class="text-white text-xl mb-2 font-semibold sm:text-2xl"
+                    >
                       International Institute of Information Technology,
                       Bangalore
                     </p>
-                    <p class="text-indigo-400 text-xl">
+                    <p class="text-indigo-400 text-sm font-semibold">
                       Executive Post Graducation Programming in Data Science *
                       July 2021 - Aug 2022
                     </p>
                   </div>
                 </div>
-                <div class="py-2 px-1 text-lg text-gray-300">
+                <div class="py-2 px-1 text-lg text-gray-300 font-medium">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
                   iusto in adipisci eius repellendus illo atque amet distinctio
                   dolorem, dolore asperiores ipsa.
@@ -329,26 +348,33 @@
               </div>
             </div>
 
-
             <div
-              class="sm:max-w-lg md:max-w-3xl mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm"
+              class="xsm:max-w-lg sm:max-w-3xl mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm"
             >
               <div class="p-2">
-                <div class="gap-4 flex">
-                  <div>
-                    <img class="h-40 w-48 bg-white" src="img/scct.jpeg" alt="" />
+                <div
+                  class="gap-4 flex flex-col items-center sm:items-start sm:flex-row"
+                >
+                  <div class="flex-none">
+                    <img
+                      class="h-60 w-72 bg-white sm:h-32 sm:w-36"
+                      src="img/scct.jpeg"
+                      alt=""
+                    />
                   </div>
                   <div>
-                    <p class="text-white text-3xl mb-2">
-                      Bachlor of Science in Computer Science
+                    <p
+                      class="text-white text-xl mb-2 font-semibold sm:text-2xl"
+                    >
+                    Bachlor of Science in Computer Science
                     </p>
-                    <p class="text-indigo-400 text-xl">
+                    <p class="text-indigo-400 text-sm font-semibold">
                       Bachelor of Science in Computer Science * July 2017 - Nov
                       2020
                     </p>
                   </div>
                 </div>
-                <div class="py-2 px-1 text-lg text-gray-300">
+                <div class="py-2 px-1 text-lg text-gray-300 font-medium">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
                   iusto in adipisci eius repellendus illo atque amet distinctio
                   dolorem, dolore asperiores ipsa.
@@ -357,31 +383,36 @@
             </div>
 
             <div
-            class="sm:max-w-lg md:max-w-3xl mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm"
-          >
-            <div class="p-2">
-              <div class="gap-4 flex">
-                <div>
-                  <img class="h-40 w-48 bg-white" src="img/AFAC_logo.png" alt="" />
-                </div>
-                <div>
-                  <p class="text-white text-3xl mb-2">
+              class="xsm:max-w-lg sm:max-w-3xl mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm"
+            >
+              <div class="p-2">
+                <div
+                  class="gap-4 flex flex-col items-center sm:items-start sm:flex-row"
+                >
+                  <div class="flex-none">
+                    <img
+                      class="h-60 w-72 bg-white sm:h-32 sm:w-36"
+                      src="img/AFAC_logo.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <p
+                      class="text-white text-xl mb-2 font-semibold sm:text-2xl"
+                    >
                     Acadamy of Fine Arts & Craft
-                  </p>
-                  <p class="text-indigo-400 text-xl">
-                    Higher Secondary Education * June 2015 - Nov 2027
-                  </p>
+                    <p class="text-indigo-400 text-sm font-semibold">
+                      Higher Secondary Education * June 2015 - Nov 2017
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="py-2 px-1 text-lg text-gray-300">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-                iusto in adipisci eius repellendus illo atque amet distinctio
-                dolorem, dolore asperiores ipsa.
+                <div class="py-2 px-1 text-lg text-gray-300 font-medium">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                  iusto in adipisci eius repellendus illo atque amet distinctio
+                  dolorem, dolore asperiores ipsa.
+                </div>
               </div>
             </div>
-          </div>
-
-
           </div>
         </div>
       </div>
@@ -400,7 +431,7 @@
           >
             <!-- Blog Post 1 -->
             <div
-              class="sm:max-w-lg md:max-w-3xl mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm"
+              class="xsm:max-w-lg sm:max-w-3xl mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm"
             >
               <a href="javascript:void(0)">
                 <img

@@ -2,20 +2,22 @@
 module.exports = {
   content: ["./dist/*.html"],
   theme: {
+    screens: {
+      xsm: '360px',
+      sm: '550px',
+      md: '770px',
+      // => @media (min-width: 640px) { ... }
+
+      lg: '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      xl: '1280px',
+      '2xl': '1580px',
+
+      // => @media (min-width: 1280px) { ... }
+    },
     extend: {
-      animation:{
-        "loop-scroll":"loop-scroll 20s linear infinite"
-      },
-      keyframes:{
-        "loop-scroll":{
-          from:{transform:"translateX(0)"},
-          to:{transform:"translateX(-100%)"}
-        }
-      },
-      backgroundImage: {
-        'hero-pattern': "url('linkedinprofile1.jpg')",
-        'footer-texture': "url('linkedinprofile1.jpg')",
-      }
+      
     },
   },
   plugins: [],
