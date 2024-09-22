@@ -11,10 +11,23 @@
 
     <div class="p-2">
       <nav
-        class="w-full h-15 flex text-white justify-between p-2 items-center gap-5"
+        class="w-full h-15 flex flex-col text-white justify-start p-2 items-start gap-5"
       >
-        <div class="p-2">
-          <div class="hidden sm:block space-x-5 font-bold text-xl" id="list">
+        <div class="flex-none block sm:hidden">
+          <div
+            class="hamburger inline-block items-end justify-end place-content-end p-4"
+          >
+            <div class="line h-0.5 w-6 bg-white my-1"></div>
+            <div class="line h-0.5 w-6 bg-white my-1"></div>
+            <div class="line h-0.5 w-6 bg-white my-1"></div>
+          </div>
+        </div>
+
+        <div class="p-2 w-40 xsm:hidden sm:block">
+          <div
+            class="flex flex-col sm:flex-row sm:space-x-5 font-bold text-xl space-y-6 sm:space-y-0"
+            id="list"
+          >
             <a class="cursor-pointer hover:underline" href="#About">About</a>
             <a class="cursor-pointer hover:underline" href="#Experience"
               >Experience</a
@@ -26,15 +39,6 @@
             <a class="cursor-pointer hover:underline" href="#Project"
               >Projects</a
             >
-          </div>
-        </div>
-        <div class="xsm::block sm:hidden">
-          <div
-            class="hamburger inline-block items-end justify-end place-content-end p-4"
-          >
-            <div class="line h-0.5 w-6 bg-white my-1"></div>
-            <div class="line h-0.5 w-6 bg-white my-1"></div>
-            <div class="line h-0.5 w-6 bg-white my-1"></div>
           </div>
         </div>
       </nav>
@@ -100,14 +104,15 @@
                         <img
                           src="img/bajajindeflogo.jpeg"
                           class="w-full h-full"
-                          alt="Martiana Dialan"
                         />
                       </div>
-                      <div class="h-24">
-                        <h4 class="text-white font-semibold text-3xl">
+                      <div class="h-16 sm:h-24">
+                        <h4
+                          class="text-white font-semibold text-2xl sm:text-3xl"
+                        >
                           Junior Data Analyst
                         </h4>
-                        <p class="text-indigo-400 mt-2 text-xl">
+                        <p class="text-indigo-400 mt-2 font-medium text-base">
                           Bajaj Indef * Jan 2023 - July 2024
                         </p>
                       </div>
@@ -162,7 +167,7 @@
         <div class="text-4xl font-bold text-indigo-500 mt-2 p-2">Skills</div>
         <!-- <div class="w-24 h-1 rounded-xl bg-yellow-400"></div> -->
         <div
-          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-8 justify-items-center mt-10 w-full"
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-9 justify-items-center mt-10 w-full"
         >
           <div
             class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
@@ -223,6 +228,41 @@
             <div class="">
               <img
                 class="h-32 w-32 rounded-lg"
+                src="img/New_Power_BI_Logo.svg.png"
+                alt=""
+              />
+            </div>
+            <h1 class="text-center text-2xl font-semibold mt-2">PowerBI</h1>
+          </div>
+
+          <div
+            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
+          >
+            <div class="">
+              <img
+                class="h-32 w-32 rounded-lg"
+                src="img/PowerApps.jpg"
+                alt=""
+              />
+            </div>
+            <h1 class="text-center text-2xl font-semibold mt-2">PowerApps</h1>
+          </div>
+
+          <div
+            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
+          >
+            <div class="">
+              <img class="h-32 w-32 rounded-lg" src="img/Excel.jpeg" alt="" />
+            </div>
+            <h1 class="text-center text-2xl font-semibold mt-2">Excel</h1>
+          </div>
+
+          <div
+            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
+          >
+            <div class="">
+              <img
+                class="h-32 w-32 rounded-lg bg-white"
                 src="img/SVG/mysql.svg"
                 alt=""
               />
@@ -334,7 +374,7 @@
                       International Institute of Information Technology,
                       Bangalore
                     </p>
-                    <p class="text-indigo-400 text-sm font-semibold">
+                    <p class="text-indigo-400 text-base font-semibold">
                       Executive Post Graducation Programming in Data Science *
                       July 2021 - Aug 2022
                     </p>
@@ -366,9 +406,9 @@
                     <p
                       class="text-white text-xl mb-2 font-semibold sm:text-2xl"
                     >
-                    Bachlor of Science in Computer Science
+                      Bachlor of Science in Computer Science
                     </p>
-                    <p class="text-indigo-400 text-sm font-semibold">
+                    <p class="text-indigo-400 text-base font-semibold">
                       Bachelor of Science in Computer Science * July 2017 - Nov
                       2020
                     </p>
@@ -400,8 +440,10 @@
                     <p
                       class="text-white text-xl mb-2 font-semibold sm:text-2xl"
                     >
-                    Acadamy of Fine Arts & Craft
-                    <p class="text-indigo-400 text-sm font-semibold">
+                      Acadamy of Fine Arts & Craft
+                    </p>
+
+                    <p class="text-indigo-400 text-base font-semibold">
                       Higher Secondary Education * June 2015 - Nov 2017
                     </p>
                   </div>
