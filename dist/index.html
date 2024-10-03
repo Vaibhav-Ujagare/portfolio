@@ -6,16 +6,20 @@
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
-  <body class="bg-gray-700 h-full w-full overflow-x-hidden text-black">
+  <body
+    class="bg-gray-700 h-full w-full overflow-x-hidden text-black bg-gradient-to-r from-black to-blue-800"
+  >
     <!-- Navbar starts here  -->
 
-    <div class="p-2">
+    <div class="p-2 relative">
       <nav
-        class="w-full  flex flex-col text-white justify-evenly place-content-evenly p-2  gap-5"
+        class="w-full flex flex-col text-white justify-evenly place-content-evenly p-2 gap-5"
       >
+        <!-- Hamburger Menu for mobile view -->
         <div class="flex-none block sm:hidden">
           <div
-            class="hamburger inline-block items-end justify-end place-content-end p-4"
+            id="hamburgerButton"
+            class="hamburger inline-block items-end justify-end place-content-end p-4 cursor-pointer"
           >
             <div class="line h-0.5 w-6 bg-white my-1"></div>
             <div class="line h-0.5 w-6 bg-white my-1"></div>
@@ -23,9 +27,10 @@
           </div>
         </div>
 
-        <div class="p-2 w-40 xsm:hidden sm:block">
+        <!-- Links for larger screens -->
+        <div class="p-2 w-40 hidden sm:block">
           <div
-            class="flex flex-col sm:flex-row text-balance sm:space-x-5 font-bold sm:text-xl space-y-5 sm:space-y-0"
+            class="flex flex-col sm:flex-row text-white sm:space-x-5 font-bold sm:text-xl space-y-5 sm:space-y-0"
             id="list"
           >
             <a class="cursor-pointer hover:underline" href="#About">About</a>
@@ -42,6 +47,63 @@
           </div>
         </div>
       </nav>
+
+      <!-- Sidebar for mobile view -->
+      <div
+        id="sidebar"
+        class="fixed top-0 left-0 w-64 h-full bg-blue-800 text-white transform -translate-x-full transition-transform duration-300 ease-in-out sm:hidden z-20"
+      >
+        <div class="p-4 flex justify-between items-center">
+          <h2 class="text-2xl font-semibold">Menu</h2>
+          <!-- Close Button -->
+          <button id="closeButton" class="text-white text-2xl font-bold">
+            &times;
+          </button>
+        </div>
+        <ul class="space-y-4 p-4">
+          <li>
+            <a
+              href="#About"
+              class="block p-2 hover:bg-indigo-600 rounded text-xl font-semibold"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#Experience"
+              class="block p-2 hover:bg-indigo-600 rounded text-xl font-semibold"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a
+              href="#Skills"
+              class="block p-2 hover:bg-indigo-600 rounded text-xl font-semibold"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#Education"
+              class="block p-2 hover:bg-indigo-600 rounded text-xl font-semibold"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a
+              href="#Certificates"
+              class="block p-2 hover:bg-indigo-600 rounded text-xl font-semibold"
+              >Certificates</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Overlay to close sidebar when clicking outside -->
+      <div
+        id="overlay"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 z-10"
+      ></div>
     </div>
 
     <!-- Navbar ends here -->
@@ -160,181 +222,642 @@
 
     <!-- Experience section end here -->
     <!-- <hr /> -->
-    <!-- Skills Section start here -->
+  
+     
 
     <div class="p-2 mt-5" id="Skills">
       <div class="text-white items-center flex flex-col">
-        <div class="text-4xl font-bold text-indigo-500 mt-2 p-2">Skills</div>
+        <div class="text-4xl font-bold text-indigo-500 p-2">Skills</div>
         <!-- <div class="w-24 h-1 rounded-xl bg-yellow-400"></div> -->
-        <div
-          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-9 justify-items-center mt-10 w-full"
-        >
-          <div
-            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
-          >
-            <div class="">
-              <img class="h-32 w-32 rounded-lg" src="img/SVG/css.svg" alt="" />
+        <div class="flex overflow-hidden space-x-10 group mt-8">
+          <div class="flex space-x-10 animate-loop-scroll group-hover:paused">
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-32 w-32 rounded-lg"
+                  src="img/SVG/css.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">CSS</h1>
             </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">CSS</h1>
-          </div>
 
-          <div
-            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/django.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">Django</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/git.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">GIT</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/html.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">HTML</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/javascript.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">
+                JavaScript
+              </h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none bg-white">
+                <img
+                  class="h-44 w-44 rounded-lg bg-white"
+                  src="img/SVG/mysql.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">MySQL</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/numpy.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">Numpy</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/postgresql.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">
+                Postgresql
+              </h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/python.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">Python</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/react.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">React</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/tailwind.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">
+                Tailwind CSS
+              </h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/excel.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">Excel</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/powerapps.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">PowerApps</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/powerautomate.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">
+                Power Automate
+              </h1>
+            </div>
+
+            <div
+            class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
           >
-            <div class="">
+            <div class="max-w-none">
               <img
-                class="h-32 w-32 rounded-lg"
-                src="img/SVG/django.svg"
+                class="h-44 w-44 rounded-lg"
+                src="img/SVG/mongodb.png"
                 alt=""
               />
             </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">Django</h1>
-          </div>
-
-          <div
-            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
-          >
-            <div class="">
-              <img class="h-32 w-32 rounded-lg" src="img/SVG/git.svg" alt="" />
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">GIT</h1>
-          </div>
-
-          <div
-            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
-          >
-            <div class="">
-              <img class="h-32 w-32 rounded-lg" src="img/SVG/html.svg" alt="" />
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">HTML</h1>
-          </div>
-
-          <div
-            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
-          >
-            <div class="">
-              <img
-                class="h-32 w-32 rounded-lg"
-                src="img/SVG/javascript.svg"
-                alt=""
-              />
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">JavaScript</h1>
-          </div>
-
-          <div
-            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
-          >
-            <div class="">
-              <img
-                class="h-32 w-32 rounded-lg"
-                src="img/New_Power_BI_Logo.svg.png"
-                alt=""
-              />
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">PowerBI</h1>
-          </div>
-
-          <div
-            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
-          >
-            <div class="">
-              <img
-                class="h-32 w-32 rounded-lg"
-                src="img/PowerApps.jpg"
-                alt=""
-              />
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">PowerApps</h1>
-          </div>
-
-          <div
-            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
-          >
-            <div class="">
-              <img class="h-32 w-32 rounded-lg" src="img/Excel.jpeg" alt="" />
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">Excel</h1>
-          </div>
-
-          <div
-            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
-          >
-            <div class="">
-              <img
-                class="h-32 w-32 rounded-lg bg-white"
-                src="img/SVG/mysql.svg"
-                alt=""
-              />
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">MySQL</h1>
-          </div>
-
-          <div
-            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
-          >
-            <div class="">
-              <img
-                class="h-32 w-32 rounded-lg"
-                src="img/SVG/numpy.svg"
-                alt=""
-              />
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">Numpy</h1>
-          </div>
-
-          <div
-            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
-          >
-            <div class="">
-              <img
-                class="h-32 w-32 rounded-lg"
-                src="img/SVG/postgresql.svg"
-                alt=""
-              />
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">Postgresql</h1>
-          </div>
-
-          <div
-            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
-          >
-            <div class="">
-              <img
-                class="h-32 w-32 rounded-lg"
-                src="img/SVG/python.svg"
-                alt=""
-              />
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">Python</h1>
-          </div>
-
-          <div
-            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
-          >
-            <div class="">
-              <img
-                class="h-32 w-32 rounded-lg"
-                src="img/SVG/react.svg"
-                alt=""
-              />
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">React</h1>
-          </div>
-
-          <div
-            class="flex flex-col flex-wrap border-2 p-2 w-40 rounded-lg items-center mb-5"
-          >
-            <div class="">
-              <img
-                class="h-32 w-32 rounded-lg"
-                src="img/SVG/tailwind.svg"
-                alt=""
-              />
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Tailwind CSS
+            <h1 class="text-center text-xl font-semibold mt-2">
+              MongoDB
             </h1>
+          </div>
+
+          </div>
+
+          <div
+            class="flex space-x-10 animate-loop-scroll group-hover:paused"
+            aria-hidden="true"
+          >
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/css.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">CSS</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/django.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">Django</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/git.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">GIT</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/html.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">HTML</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/javascript.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">
+                JavaScript
+              </h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none bg-white">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/mysql.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">MySQL</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/numpy.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">Numpy</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/postgresql.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">
+                Postgresql
+              </h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/python.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">Python</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/react.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">React</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/tailwind.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">
+                Tailwind CSS
+              </h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/excel.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">Excel</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/powerapps.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">PowerApps</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/powerautomate.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">
+                Power Automate
+              </h1>
+            </div>
+
+            <div
+            class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+          >
+            <div class="max-w-none">
+              <img
+                class="h-44 w-44 rounded-lg"
+                src="img/SVG/mongodb.png"
+                alt=""
+              />
+            </div>
+            <h1 class="text-center text-xl font-semibold mt-2">
+              MongoDB
+            </h1>
+          </div>
+          </div>
+
+
+          <div
+            class="flex space-x-10 animate-loop-scroll group-hover:paused"
+            aria-hidden="true"
+          >
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/css.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">CSS</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/django.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">Django</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/git.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">GIT</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/html.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">HTML</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/javascript.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">
+                JavaScript
+              </h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none bg-white">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/mysql.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">MySQL</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/numpy.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">Numpy</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/postgresql.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">
+                Postgresql
+              </h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/python.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">Python</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/react.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">React</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/tailwind.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">
+                Tailwind CSS
+              </h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/excel.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">Excel</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/powerapps.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">PowerApps</h1>
+            </div>
+
+            <div
+              class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+            >
+              <div class="max-w-none">
+                <img
+                  class="h-44 w-44 rounded-lg"
+                  src="img/SVG/powerautomate.svg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-xl font-semibold mt-2">
+                Power Automate
+              </h1>
+            </div>
+
+            <div
+            class="flex flex-col flex-wrap border-2 p-2 w-48 rounded-lg items-center mb-5"
+          >
+            <div class="max-w-none">
+              <img
+                class="h-44 w-44 rounded-lg"
+                src="img/SVG/mongodb.png"
+                alt=""
+              />
+            </div>
+            <h1 class="text-center text-xl font-semibold mt-2">
+              MongoDB
+            </h1>
+          </div>
+
           </div>
         </div>
       </div>
@@ -347,7 +870,7 @@
     <div class="p-2 mt-5" id="Education">
       <div class="text-white mt-5 items-center flex flex-col">
         <div class="text-4xl font-bold text-indigo-500 mb-2">Education</div>
-        <!-- <div class="w-44 h-1 rounded-xl bg-yellow-400"></div> -->
+        <!-- <div class="w-44 h-1 rounded-xl bg-yellow-480"></div> -->
         <div class="py-5 mb-6 w-full px-6">
           <div
             class="mt-5 grid gap-4 xsm:grid-cols-1 lg:grid-cols-2 md:grid-cols-1"
@@ -381,9 +904,7 @@
                   </div>
                 </div>
                 <div class="py-2 px-1 text-lg text-gray-300 font-medium">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-                  iusto in adipisci eius repellendus illo atque amet distinctio
-                  dolorem, dolore asperiores ipsa.
+                  I pursued my education at IIIT-Bangalore, where I gained foundational knowledge in data science and machine learning. The program provided me with a strong understanding of essential concepts and practical applications, which has helped in developing analytical and problem-solving skills
                 </div>
               </div>
             </div>
@@ -415,46 +936,12 @@
                   </div>
                 </div>
                 <div class="py-2 px-1 text-lg text-gray-300 font-medium">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-                  iusto in adipisci eius repellendus illo atque amet distinctio
-                  dolorem, dolore asperiores ipsa.
+                  I completed my BSc in Computer Science, where I gained foundational knowledge in programming, computer networks, and database management systems. This experience built a solid base for understanding software development and IT infrastructure.
                 </div>
               </div>
             </div>
 
-            <div
-              class="xsm:max-w-lg sm:max-w-3xl mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm"
-            >
-              <div class="p-2">
-                <div
-                  class="gap-4 flex flex-col items-center sm:items-start sm:flex-row"
-                >
-                  <div class="flex-none">
-                    <img
-                      class="h-60 w-72 bg-white sm:h-32 sm:w-36"
-                      src="img/AFAC_logo.png"
-                      alt=""
-                    />
-                  </div>
-                  <div>
-                    <p
-                      class="text-white text-xl mb-2 font-semibold sm:text-2xl"
-                    >
-                      Acadamy of Fine Arts & Craft
-                    </p>
-
-                    <p class="text-indigo-400 text-base font-semibold">
-                      Higher Secondary Education * June 2015 - Nov 2017
-                    </p>
-                  </div>
-                </div>
-                <div class="py-2 px-1 text-lg text-gray-300 font-medium">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-                  iusto in adipisci eius repellendus illo atque amet distinctio
-                  dolorem, dolore asperiores ipsa.
-                </div>
-              </div>
-            </div>
+          
           </div>
         </div>
       </div>
@@ -468,9 +955,7 @@
         <div class="text-4xl font-bold text-indigo-500 mb-2">Projects</div>
         <!-- <div class="w-36 h-1 rounded-xl bg-yellow-400"></div> -->
         <div class="w-full mb-6">
-          <div
-            class="mt-5 grid gap-4 grid-cols-1  md:grid-cols-2 "
-          >
+          <div class="mt-5 grid gap-4 grid-cols-1 md:grid-cols-2">
             <!-- Blog Post 1 -->
             <div
               class="xsm:max-w-lg sm:max-w-3xl mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm"
@@ -479,12 +964,12 @@
                 <img
                   src="img/ATS-Project-SS.png"
                   alt="Application Tracking System"
-                  class="w-full h-60 rounded-t-md"
+                  class="w-full h-60 rounded-t-md "
                 />
                 <hr />
                 <div class="flex items-center pt-3 ml-4 mr-2">
                   <div class="">
-                    <span class="block text-white text-2xl"
+                    <span class="block text-white text-2xl font-semibold"
                       >Application Tracking System</span
                     >
                     <!-- <span class="block text-gray-400 text-sm">Jan 4 2022</span> -->
@@ -493,12 +978,12 @@
                 <div class="pt-3 ml-4 mr-2 mb-3">
                   <div class="flex gap-3 items-center mb-2">
                     <h1
-                      class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-1"
+                      class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-2"
                     >
                       Python
                     </h1>
                     <h1
-                      class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-1"
+                      class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-2"
                     >
                       API(Google Generative AI)
                     </h1>
@@ -513,13 +998,13 @@
                 </div>
               </a>
             </div>
-            
+
             <div
               class="xsm:max-w-lg sm:max-w-3xl mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm"
             >
               <a href="javascript:void(0)">
                 <img
-                  src="img/ATS-Project-SS.png"
+                  src="img/portfolioprojectlogo.png"
                   loading="lazy"
                   alt="Application Tracking System"
                   class="w-full h-60 rounded-t-md"
@@ -527,8 +1012,8 @@
                 <hr />
                 <div class="flex items-center pt-3 ml-4 mr-2">
                   <div class="">
-                    <span class="block text-white text-2xl"
-                      >Application Tracking System</span
+                    <span class="block text-white text-2xl font-semibold"
+                      >Personal Portfolio</span
                     >
                     <!-- <span class="block text-gray-400 text-sm">Jan 4 2022</span> -->
                   </div>
@@ -536,69 +1021,28 @@
                 <div class="pt-3 ml-4 mr-2 mb-3">
                   <div class="flex gap-3 items-center mb-2">
                     <h1
-                      class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-1"
+                      class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-2"
                     >
-                      Python
+                      HTML
                     </h1>
                     <h1
-                      class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-1"
+                      class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-2"
                     >
-                      API(Google Generative AI)
+                      Tailwind CSS
+                    </h1>
+                    <h1
+                      class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-2"
+                    >
+                      JavaScript
                     </h1>
                   </div>
                   <p class="text-gray-400 text-sm mt-1">
-                    Developed an Application Tracking System designed to
-                    calculate the percentage of job descriptions that align with
-                    the skills listed in your resume. The system also suggests
-                    keywords to include in your resume to improve the match
-                    rate.
+                    Welcome to my personal portfolio website! This space showcases my skills, experience, and projects as a data analyst/developer.  Explore my portfolio to learn more about my professional journey, skill set. I'm passionate about creating impactful solutions and driving success through innovation.
                   </p>
                 </div>
               </a>
             </div>
-            
-            <div
-            class="xsm:max-w-lg sm:max-w-3xl mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm"
-          >
-            <a href="javascript:void(0)">
-              <img
-                src="img/ATS-Project-SS.png"
-                loading="lazy"
-                alt="Application Tracking System"
-                class="w-full h-60 rounded-t-md"
-              />
-              <hr />
-              <div class="flex items-center pt-3 ml-4 mr-2">
-                <div class="">
-                  <span class="block text-white text-2xl"
-                    >Application Tracking System</span
-                  >
-                  <!-- <span class="block text-gray-400 text-sm">Jan 4 2022</span> -->
-                </div>
-              </div>
-              <div class="pt-3 ml-4 mr-2 mb-3">
-                <div class="flex gap-3 items-center mb-2">
-                  <h1
-                    class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-1"
-                  >
-                    Python
-                  </h1>
-                  <h1
-                    class="text-xs font-bold bg-violet-500 rounded-full items-center text-center p-1"
-                  >
-                    API(Google Generative AI)
-                  </h1>
-                </div>
-                <p class="text-gray-400 text-sm mt-1">
-                  Developed an Application Tracking System designed to
-                  calculate the percentage of job descriptions that align with
-                  the skills listed in your resume. The system also suggests
-                  keywords to include in your resume to improve the match
-                  rate.
-                </p>
-              </div>
-            </a>
-          </div>
+
           
           </div>
         </div>
@@ -634,11 +1078,28 @@
     <!-- Footer section ends here -->
   </body>
 
-  <!-- <script>
-    let showresume = document
-      .getElementById("downloadresumebtn")
-      .addEventListener("click", function () {
-        alert("Footer clicked");
-      });
-  </script> -->
+  <script>
+    const sidebar = document.getElementById("sidebar");
+    const hamburgerButton = document.getElementById("hamburgerButton");
+    const overlay = document.getElementById("overlay");
+    const closeButton = document.getElementById("closeButton");
+
+    // Toggle Sidebar Functionality (Open)
+    hamburgerButton.addEventListener("click", () => {
+      sidebar.classList.toggle("-translate-x-full");
+      overlay.classList.toggle("hidden");
+    });
+
+    // Close Sidebar when clicking the close button
+    closeButton.addEventListener("click", () => {
+      sidebar.classList.add("-translate-x-full");
+      overlay.classList.add("hidden");
+    });
+
+    // Close Sidebar when clicking outside
+    overlay.addEventListener("click", () => {
+      sidebar.classList.add("-translate-x-full");
+      overlay.classList.add("hidden");
+    });
+  </script>
 </html>
