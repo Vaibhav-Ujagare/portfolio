@@ -641,6 +641,7 @@
         >
           <form
             class="w-[70%] lg-mx:w-full m-auto flex flex-col gap-6 sm-mx:p-4"
+            id="contact-form"
           >
             <input
               type="text"
@@ -648,6 +649,7 @@
               class="block px-2.5 pb-2.5 xs-mx:text-base pt-4 w-full text-xl sm-mx:text-lg rounded-xl text-white bg-transparent border"
               placeholder="Name"
               required=""
+              id="name"
             />
             <input
               type="email"
@@ -656,6 +658,7 @@
               placeholder="Email"
               required=""
               fdprocessedid="05mez"
+              id="email"
             /><input
               type="number"
               name="phone"
@@ -663,6 +666,7 @@
               placeholder="Phone Number"
               required=""
               fdprocessedid="9w9gyz"
+              id="number"
             />
             <textarea
               name="message"
@@ -670,6 +674,7 @@
               class="block px-2.5 pb-2.5 xs-mx:text-base pt-4 w-full text-xl sm-mx:text-lg rounded-xl text-white bg-transparent border"
               placeholder="Message"
               required=""
+              id="message"
             ></textarea>
             <button
               class="bg-teal-400 rounded-lg h-10"
@@ -680,10 +685,7 @@
               data-size="lg"
               fdprocessedid="vn91fr"
             >
-              <span class="">
-                <span class="">Send</span>
-                <span class="" data-position="right"> </span>
-              </span>
+              SEND
             </button>
           </form>
         </div>
@@ -716,30 +718,70 @@
       </div>
     </footer>
     <!-- Footer section ends here -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+      (function () {
+        // Initialize EmailJS with your user ID
+        emailjs.init("voFidp0yIIS-vWyAw");
+      })();
+    </script>
+
+    <script>
+      const sidebar = document.getElementById("sidebar");
+      const hamburgerButton = document.getElementById("hamburgerButton");
+      const overlay = document.getElementById("overlay");
+      const closeButton = document.getElementById("closeButton");
+
+      // Toggle Sidebar Functionality (Open)
+      hamburgerButton.addEventListener("click", () => {
+        sidebar.classList.toggle("-translate-x-full");
+        overlay.classList.toggle("hidden");
+      });
+
+      // Close Sidebar when clicking the close button
+      closeButton.addEventListener("click", () => {
+        sidebar.classList.add("-translate-x-full");
+        overlay.classList.add("hidden");
+      });
+
+      // Close Sidebar when clicking outside
+      overlay.addEventListener("click", () => {
+        sidebar.classList.add("-translate-x-full");
+        overlay.classList.add("hidden");
+      });
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const number = document.getElementById("number").value;
+          const message = document.getElementById("message").value;
+
+          console.log(name, email, number, message);
+
+          emailjs
+            .send("service_90krmsd", "template_3otf3x6", {
+              from_name: name,
+              from_email: email,
+              phone_number: number,
+              message: message,
+            })
+            .then(
+              (response) => {
+                alert("Email Sent Successfully!");
+                console.log("SUCCESS!", response.status, response.text);
+                document.getElementById("contact-form").reset();
+              },
+              (error) => {
+                alert("Failed to send email. Please try again.");
+                console.log("FAILED...", error);
+              }
+            );
+        });
+    </script>
   </body>
-
-  <script>
-    const sidebar = document.getElementById("sidebar");
-    const hamburgerButton = document.getElementById("hamburgerButton");
-    const overlay = document.getElementById("overlay");
-    const closeButton = document.getElementById("closeButton");
-
-    // Toggle Sidebar Functionality (Open)
-    hamburgerButton.addEventListener("click", () => {
-      sidebar.classList.toggle("-translate-x-full");
-      overlay.classList.toggle("hidden");
-    });
-
-    // Close Sidebar when clicking the close button
-    closeButton.addEventListener("click", () => {
-      sidebar.classList.add("-translate-x-full");
-      overlay.classList.add("hidden");
-    });
-
-    // Close Sidebar when clicking outside
-    overlay.addEventListener("click", () => {
-      sidebar.classList.add("-translate-x-full");
-      overlay.classList.add("hidden");
-    });
-  </script>
 </html>
